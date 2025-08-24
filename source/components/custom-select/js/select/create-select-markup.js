@@ -3,12 +3,12 @@ const createNativeOptionsMarkup = (items, activeIndex) => {
     if (activeIndex.length) {
       const currentIndex = activeIndex.find((item) => item === index);
       if (currentIndex === index) {
-        return `<option ${el.value ? `value=${el.value}` : ''} selected>${el.text ? `${el.text}` : ''}</option>`;
+        return `<option ${el.value ? `value="${el.value}"` : ''} selected>${el.text ? `${el.text}` : ''}</option>`;
       } else {
-        return `<option ${el.value ? `value=${el.value}` : ''}>${el.text ? `${el.text}` : ''}</option>`;
+        return `<option ${el.value ? `value="${el.value}"` : ''}>${el.text ? `${el.text}` : ''}</option>`;
       }
     } else {
-      return `<option ${el.value ? `value=${el.value}` : ''}>${el.text ? `${el.text}` : ''}</option>`;
+      return `<option ${el.value ? `value="${el.value}"` : ''}>${el.text ? `${el.text}` : ''}</option>`;
     }
   }).join('\n');
 };
